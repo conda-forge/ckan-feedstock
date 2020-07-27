@@ -5,7 +5,7 @@ Home: http://ckan.org/
 
 Package license: GNU Affero General Public v3 or later (AGPLv3+)
 
-Feedstock license: BSD 3-Clause
+Feedstock license: BSD-3-Clause
 
 Summary: CKAN Software for making open data websites.
 

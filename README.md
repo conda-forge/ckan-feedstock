@@ -5,11 +5,13 @@ Home: http://ckan.org/
 
 Package license: GNU Affero General Public v3 or later (AGPLv3+)
 
-Feedstock license: BSD-3-Clause
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/ckan-feedstock/blob/master/LICENSE.txt)
 
 Summary: CKAN Software for making open data websites.
 
+Development: https://github.com/ckan/ckan
 
+Documentation: https://docs.ckan.org/en/2.8/
 
 Current build status
 ====================
@@ -112,5 +114,7 @@ Feedstock Maintainers
 
 * [@benhuff](https://github.com/benhuff/)
 * [@mwilson8](https://github.com/mwilson8/)
+* [@ndmaxar](https://github.com/ndmaxar/)
+* [@oblute](https://github.com/oblute/)
 * [@rluria14](https://github.com/rluria14/)
 

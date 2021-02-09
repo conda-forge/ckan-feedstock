@@ -1,5 +1,5 @@
 {% set name = "ckan" %}
-{% set version = "2.9.1" %}
+{% set version = "2.9.2" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://github.com/ckan/{{ name }}/archive/{{ name }}-{{ version }}.tar.gz
-  sha256: 1dcfbb757204cf94ecd14bf49ccb5fdd213c5c491a3efe3ac9de571d42e587ef
+  sha256: 1bafa61688a1dbe82771cadb4ea28f6e7d55a6b6deed59d962009531f008a319
   patches:
     - webob.patch
 

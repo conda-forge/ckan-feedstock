@@ -43,11 +43,11 @@ about:
   license: Apache-2.0
   license_file: LICENSE.txt
 
-  extra:
-    recipe-maintainers:
-      - mxr-conda
-      - rluria14
-      - mwilson8
-      - benhuff
-      - oblute
-      - ndmaxar
+extra:
+  recipe-maintainers:
+    - mxr-conda
+    - rluria14
+    - mwilson8
+    - benhuff
+    - oblute
+    - ndmaxar

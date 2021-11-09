@@ -37,9 +37,11 @@ test:
 
 about:
   home: http://ckan.org/
-  summary: CKAN Software
-  doc_url: https://pythonhosted.org/ckan/
-  license: Apache-2.0
+  summary: CKAN Software for making open data websites.
+  doc_url: https://docs.ckan.org/en/2.9/
+  dev_url: https://github.com/ckan/ckan
+  license: GNU Affero General Public v3 or later (AGPLv3+)
+  license_family: AGPL
   license_file: LICENSE.txt
 
 extra:

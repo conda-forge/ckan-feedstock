@@ -22,13 +22,14 @@ requirements:
     - ez_setup
     - pip
     - python >=3.6
+    - setuptools==44.1.0
   run:
     - python >=3.6
+    - click
 
 test:
   imports:
     - ckan
-    - click
     - ckan.cli
   commands:
     - pip check

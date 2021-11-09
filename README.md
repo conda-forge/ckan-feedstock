@@ -3,21 +3,25 @@ About ckan
 
 Home: http://ckan.org/
 
-Package license: GNU Affero General Public v3 or later (AGPLv3+)
+Package license: Apache-2.0
 
 Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/ckan-feedstock/blob/master/LICENSE.txt)
 
-Summary: CKAN Software for making open data websites.
+Summary: CKAN Software
 
-Development: https://github.com/ckan/ckan
-
-Documentation: https://docs.ckan.org/en/2.8/
+Documentation: https://pythonhosted.org/ckan/
 
 Current build status
 ====================
 
 
-<table>
+<table><tr><td>All platforms:</td>
+    <td>
+      <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=8241&branchName=master">
+        <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/ckan-feedstock?branchName=master">
+      </a>
+    </td>
+  </tr>
 </table>
 
 Current release info

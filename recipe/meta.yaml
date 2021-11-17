@@ -12,7 +12,9 @@ source:
     - webob.patch
 
 build:
-  number: 1
+  number: 0
+  entry_points:
+    - ckan = ckan.cli.cli:ckan
   script: {{ PYTHON }} -m pip install . -vv
   skip: true  # [win]
 
@@ -23,70 +25,144 @@ requirements:
     - setuptools
   run:
     - python
-    - alembic ==1.0.0
-    - babel ==2.7.0
-    - beaker ==1.11.0
-    - bleach ==3.1.4
-    - certifi ==2021.5.30
-    - chardet ==4.0.0
-    - click ==7.1.2 
-    - dominate ==2.4.0
-    - fanstatic >=1.1
-    - feedgen ==0.9.0 
-    - flask ==1.1.1
-    - flask-babel ==1.0.0
-    - flask-multistatic ==1.0 
-    - flask ==1.1.1              
-    - funcsigs ==1.0.2       
-    - idna ==2.10
-    - itsdangerous ==1.1.0
-    - jinja2 ==2.10.1
-    - lxml ==4.6.3
-    - mako ==1.1.5     
-    - markdown ==2.6.7
-    - markupsafe ==1.1.1
-    - nose ==1.3.7
-    - passlib >=1.6.5
-    - polib ==1.0.7
-    - psycopg2 ==2.8.2
-    - pyjwt ==1.7.1 
-    - python-magic ==0.4.15
-    - pysolr ==3.6.0
-    - python-dateutil ==2.8.2
-    - python-editor ==1.0.4 
-    - pytz ==2016.7
-    - pyutilib ==5.7.1
-    - pyyaml ==5.4.1
-    - redis ==3.5.3
-    - repoze.lru ==0.7
-    - repoze.who ==2.3
-    - requests ==2.25.1
-    - routes ==1.13
-    - rq ==1.0
-    - shutilwhich ==1.1.0
-    - simplejson >=3.10.0
-    - six ==1.16.0
-    - sqlalchemy-migrate ==0.12.0
-    - sqlalchemy ==1.3.5
-    - sqlparse ==0.2.2
-    - tzlocal ==1.3
-    - unicodecsv ==0.14.1
-    - urllib3  ==1.26.6
-    - watchdog ==2.1.5
-    - webassets ==0.12.1
-    - webencodings ==0.5.1 
-    - webob ==1.8.7
-    - werkzeug ==1.0.0
-    - zope.interface >=4.3.2
+    - setuptools
 
 test:
   imports:
     - ckan
+    - ckan.cli
+    - ckan.config
+    - ckan.config.middleware
+    - ckan.controllers
+    - ckan.i18n
+    - ckan.include
+    - ckan.lib
+    - ckan.lib.dictization
+    - ckan.lib.navl
+    - ckan.lib.repoze_plugins
+    - ckan.lib.search
+    - ckan.logic
+    - ckan.logic.action
+    - ckan.logic.auth
+    - ckan.migration
+    - ckan.migration.versions
+    - ckan.model
+    - ckan.pastertemplates
     - ckan.plugins
-
+    - ckan.tests
+    - ckan.tests.cli
+    - ckan.tests.config
+    - ckan.tests.controllers
+    - ckan.tests.i18n
+    - ckan.tests.legacy
+    - ckan.tests.legacy.functional
+    - ckan.tests.legacy.functional.api
+    - ckan.tests.legacy.functional.api.model
+    - ckan.tests.legacy.lib
+    - ckan.tests.legacy.logic
+    - ckan.tests.legacy.models
+    - ckan.tests.legacy.schema
+    - ckan.tests.lib
+    - ckan.tests.lib.dictization
+    - ckan.tests.lib.navl
+    - ckan.tests.lib.search
+    - ckan.tests.logic
+    - ckan.tests.logic.action
+    - ckan.tests.logic.auth
+    - ckan.tests.migration
+    - ckan.tests.model
+    - ckan.tests.plugins
+    - ckan.tests.pytest_ckan
+    - ckan.views
+    - ckanext
+    - ckanext.audioview
+    - ckanext.audioview.tests
+    - ckanext.chained_functions
+    - ckanext.chained_functions.tests
+    - ckanext.datapusher
+    - ckanext.datapusher.logic
+    - ckanext.datapusher.tests
+    - ckanext.datastore
+    - ckanext.datastore.backend
+    - ckanext.datastore.logic
+    - ckanext.datastore.tests
+    - ckanext.datatablesview
+    - ckanext.example_database_migrations
+    - ckanext.example_flask_iblueprint
+    - ckanext.example_flask_iblueprint.tests
+    - ckanext.example_flask_streaming
+    - ckanext.example_flask_streaming.tests
+    - ckanext.example_iapitoken
+    - ckanext.example_iapitoken.tests
+    - ckanext.example_iauthenticator
+    - ckanext.example_iauthfunctions
+    - ckanext.example_iclick
+    - ckanext.example_iconfigurer
+    - ckanext.example_iconfigurer.tests
+    - ckanext.example_idatasetform
+    - ckanext.example_idatasetform.tests
+    - ckanext.example_idatastorebackend
+    - ckanext.example_idatastorebackend.test
+    - ckanext.example_igroupform
+    - ckanext.example_igroupform.tests
+    - ckanext.example_ipermissionlabels
+    - ckanext.example_ipermissionlabels.tests
+    - ckanext.example_iresourcecontroller
+    - ckanext.example_itemplatehelpers
+    - ckanext.example_itranslation
+    - ckanext.example_itranslation.tests
+    - ckanext.example_iuploader
+    - ckanext.example_iuploader.test
+    - ckanext.example_ivalidators
+    - ckanext.example_ivalidators.tests
+    - ckanext.example_theme_docs
+    - ckanext.example_theme_docs.custom_config_setting
+    - ckanext.example_theme_docs.custom_emails
+    - ckanext.example_theme_docs.v01_empty_extension
+    - ckanext.example_theme_docs.v02_empty_template
+    - ckanext.example_theme_docs.v03_jinja
+    - ckanext.example_theme_docs.v04_ckan_extends
+    - ckanext.example_theme_docs.v05_block
+    - ckanext.example_theme_docs.v06_super
+    - ckanext.example_theme_docs.v07_helper_function
+    - ckanext.example_theme_docs.v08_custom_helper_function
+    - ckanext.example_theme_docs.v09_snippet
+    - ckanext.example_theme_docs.v10_custom_snippet
+    - ckanext.example_theme_docs.v11_HTML_and_CSS
+    - ckanext.example_theme_docs.v12_extra_public_dir
+    - ckanext.example_theme_docs.v13_custom_css
+    - ckanext.example_theme_docs.v14_more_custom_css
+    - ckanext.example_theme_docs.v15_fanstatic
+    - ckanext.example_theme_docs.v16_initialize_a_javascript_module
+    - ckanext.example_theme_docs.v17_popover
+    - ckanext.example_theme_docs.v18_snippet_api
+    - ckanext.example_theme_docs.v19_01_error
+    - ckanext.example_theme_docs.v19_02_error_handling
+    - ckanext.example_theme_docs.v20_pubsub
+    - ckanext.example_theme_docs.v21_custom_jquery_plugin
+    - ckanext.example_theme_docs.v22_fanstatic_and_webassets
+    - ckanext.expire_api_token
+    - ckanext.expire_api_token.tests
+    - ckanext.imageview
+    - ckanext.imageview.tests
+    - ckanext.multilingual
+    - ckanext.reclineview
+    - ckanext.reclineview.tests
+    - ckanext.resourceproxy
+    - ckanext.resourceproxy.tests
+    - ckanext.stats
+    - ckanext.stats.public
+    - ckanext.stats.public.ckanext
+    - ckanext.stats.public.ckanext.stats
+    - ckanext.stats.tests
+    - ckanext.textview
+    - ckanext.textview.tests
+    - ckanext.videoview
+    - ckanext.videoview.tests
+    - ckanext.webpageview
+    - ckanext.webpageview.tests
   commands:
-    - paster --version
-    - paster --plugin=ckan --help
+    - ckan --help
 
 about:
   home: http://ckan.org/

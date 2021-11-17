@@ -22,7 +22,7 @@ requirements:
     - python
   run:
     - python
-- alembic ==1.7.5
+    - alembic ==1.7.5
     - babel ==2.9.0
     - beaker ==1.11.0
     - beautifulsoup4 ==4.10.0

@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://github.com/ckan/{{ name }}/archive/{{ name }}-{{ version }}.tar.gz
-  sha256: 6f7c67b2cc378d2935328d3d599dd22bda4115095e39c643898854b4563978a7
+  sha256: 028eff120acddb5e3d0f285aad4bda8e40c80c922ffb6811a56f47215275eda5
   patches:
     - webob.patch
 

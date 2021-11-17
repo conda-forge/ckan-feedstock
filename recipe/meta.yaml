@@ -175,9 +175,5 @@ about:
 
 extra:
   recipe-maintainers:
-    - mxr-conda
-    - rluria14
-    - mwilson8
-    - benhuff
+    - mxr-condas
     - oblute
-    - ndmaxar

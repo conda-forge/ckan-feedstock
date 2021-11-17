@@ -8,8 +8,6 @@ package:
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
   sha256: 6f7c67b2cc378d2935328d3d599dd22bda4115095e39c643898854b4563978a7
-  patches:
-    - webob.patch
 
 build:
   number: 0

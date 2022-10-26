@@ -1,5 +1,5 @@
 {% set name = "ckan" %}
-{% set version = "2.9.4" %}
+{% set version = "2.9.7" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/ckan-{{ version }}.tar.gz
-  sha256: 6f7c67b2cc378d2935328d3d599dd22bda4115095e39c643898854b4563978a7
+  sha256: 1e9d75194debd2ada7a58873d4483e2e0db577cd3fd56f6c2b86a8d5f78a4eb0
 
 build:
   number: 0
@@ -67,7 +67,7 @@ requirements:
     - werkzeug ==1.0.1
     - zope.interface ==5.4.0
 
-        
+
 test:
   imports:
     - ckan

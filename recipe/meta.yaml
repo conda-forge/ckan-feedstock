@@ -14,7 +14,7 @@ build:
     - ckan = ckan.cli.cli:ckan
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
-  number: 3
+  number: 0
 
 requirements:
   host:

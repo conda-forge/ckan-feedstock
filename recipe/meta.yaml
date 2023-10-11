@@ -63,10 +63,11 @@ requirements:
     - webassets >=2.0
     - werkzeug >=2.3.7
     - zope.interface >=6.0
-
-    - watchdog >=2.3 # Werkzeug[watchdog]
-    - mypy >=0.910  # SQLAlchemy[mypy]
-    - sqlalchemy2-stubs  #SQLAlchemy[mypy]
+    # Werkzeug[watchdog]
+    - watchdog >=2.3
+    # SQLAlchemy[mypy]
+    - mypy >=0.910
+    - sqlalchemy2-stubs
 
 test:
   imports:

@@ -1,3 +1,7 @@
+noarch_platforms:
+- win_64
+- linux_64
+- osx_64
 travis:
   secure:
     BINSTAR_TOKEN: gYpGvadWvqa/+NyrCgTQR4+EoASvElkcpqpEaviRREstqACdfXkBQ0V75imZNWOr8aJ4y1FwtjWuBNrF/L9obrn6ved3u+mVUaE8hc2PjDb1Pd8urzY0xSCqhQDgkLUWHCYPGLUrLNIFvKlnmWqBMdgkrbLOKGX3zH0G0A2wPnbTe9Eyb5feYdLnjS+loffhpy9dzcaaGvWHeEXjKip3Qpea+Qx5nBNIvNo0O7tthUxv1PUXQTM3KdQwq+NagJW/FsUC9/TlrwBt6FnS5PWw7eIhpG7EF7I9avMvSZ+vFIWOgHEExaUzKlxHUAPaH2e2J89C8zFB1Z+hji1LpsX/Sbw+jugP5I9knv6C4v9ptdqUwgJeOC/B5172ILqoVNoixvPiAwG4muIiRxRv+TKsbFiKdcpQNyaCgc+S5P19HS9zbleWriTjr7VHNrkeK6F7CLlu0Xkac8V8Psttt5a/ZWWdZfpUhvHKwrpNrkrFNNbgX5zW8yBekWI2s7vJ6ao90EQI9cXnG7yTtNg0Zw/KCr/iE0ILIYz6l4TWIIFD5I2+2anOqUF3fBKeOMQ1saUoblyXs2iejlde5qRH8jZQtOg833wBc2RUlkbwcFSYKFHZkNpnKeX7twzXtarxgctmzeXq/cnoiWoW8zygSClVloxbeTJjLf+7mNN1s9jcY4I=
@@ -7,3 +11,7 @@ github:
   tooling_branch_name: main
 conda_build:
   pkg_format: '2'
+  error_overlinking: true
+bot:
+  automerge: true
+  inspection: update-grayskull

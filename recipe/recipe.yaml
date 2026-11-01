@@ -93,8 +93,7 @@ tests:
       recipe:
         - run_test.py
     script:
-      - ckan --help
-      - ckan --version
+      - ckan generate config --help
       - ckan generate config ckan.ini
       - python run_test.py
 

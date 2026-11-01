@@ -1,18 +1,20 @@
-{% set name = "ckan" %}
-{% set version = "2.9.4" %}
+schema_version: 1
+
+context:
+  version: "2.9.4"
 
 package:
-  name: {{ name|lower }}
-  version: {{ version }}
+  name: ckan
+  version: ${{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/ckan-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/c/ckan/ckan-${{ version }}.tar.gz
   sha256: 6f7c67b2cc378d2935328d3d599dd22bda4115095e39c643898854b4563978a7
 
 build:
   number: 0
-  script: '{{ PYTHON }} -m pip install . -vv '
-  skip: true  # [win]
+  skip: win
+  script: python -m pip install . -vv
 
 requirements:
   host:
@@ -20,7 +22,6 @@ requirements:
     - pip
     - python
     - setuptools
-
   run:
     - python
     - alembic ==1.7.5
@@ -67,26 +68,21 @@ requirements:
     - werkzeug ==1.0.1
     - zope.interface ==5.4.0
 
-        
-test:
-  imports:
-    - ckan
-    - ckan.cli
-  commands:
-    - pip check
-    - ckan --help
-  requires:
-    - pip
-
+tests:
+  - python:
+      imports:
+        - ckan
+        - ckan.cli
+      pip_check: true
+  - script: ckan --help
 
 about:
-  home: http://ckan.org/
+  homepage: https://ckan.org/
   license: AGPL-3.0-or-later
-  license_family: AGPL
   license_file: LICENSE.txt
   summary: CKAN Software for making open data websites.
-  doc_url: https://docs.ckan.org/en/2.9/
-  dev_url: https://github.com/ckan/ckan
+  documentation: https://docs.ckan.org/en/2.9/
+  repository: https://github.com/ckan/ckan
 
 extra:
   recipe-maintainers:
